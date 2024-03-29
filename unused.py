@@ -31,3 +31,9 @@ async def passe(ctx, user: discord.Member):
 async def partida(ctx):
   partidaa = random.choice(partidaaa)
   await ctx.send(f'{partidaa}')
+
+## SAO ##
+
+@client.command()
+async def eventos(ctx):
+  await ctx.send(f'O evento atual é: {banner}')

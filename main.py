@@ -876,12 +876,6 @@ async def join(ctx):
     await channel.connect()
 
 
-## SAO ##
-
-@client.command()
-async def eventos(ctx):
-  await ctx.send(f'O evento atual é: {banner}')
-
 
 
 
