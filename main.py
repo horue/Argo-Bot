@@ -18,7 +18,6 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = client = commands.Bot(command_prefix = '-', case_insensitive = True, activity=discord.Game(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
 versao = ('0.0.1')
-banner = ('https://imgur.com/H6pKvIH')
 
 
 ## Bancos de dado ##

@@ -1,3 +1,5 @@
+banner = ('https://imgur.com/H6pKvIH')
+
 good_pass = [
   'consegue efetuar um passe incrível para um companheiro de time!'
 ]
