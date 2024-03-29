@@ -3,7 +3,7 @@ Make a local librarie for the lists
 Add ZeroChan API to the -w command
 Add option to custom prefixes
 Add new economy funcitons and finish the unfinished ones
-Remove unused variables (or add it to a new file)
+DONE - Remove unused variables (or add it to a new file)
 Add full English translation
 Make a documentation with all commands
 Add an option to change language
