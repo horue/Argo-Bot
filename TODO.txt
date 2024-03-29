@@ -7,3 +7,5 @@ Remove unused variables (or add it to a new file)
 Add full English translation
 Make a documentation with all commands
 Add an option to change language
+Add blocking words option
+Add a way to user ser prohibited words
