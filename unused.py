@@ -14,6 +14,10 @@ partidaaa = [
   'Nas mãos do goleiro!'
 ]
 
+banners = [
+  "https://imgur.com/H6pKvIH"
+]
+
 ## Inazuma Eleven RPG ##
 
 @client.command()

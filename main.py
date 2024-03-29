@@ -375,9 +375,6 @@ traps = [
 bichos = [
   "Cão de Guarda"
 ]
-banners = [
-  "https://imgur.com/H6pKvIH"
-]
 nomesh = [
   "Naru",
   "Oye",
