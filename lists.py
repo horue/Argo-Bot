@@ -483,6 +483,3 @@ japa = [
 'https://javhd.pics/media/japanese/yua-mikami/60/hd-yua-mikami-10.jpg',
 'https://javhd.pics/media/japanese/yua-mikami/30/hd-yua-mikami-1.jpg',
 ]
-good_pass = [
-  'consegue efetuar um passe incrível para um companheiro de time!'
-]
