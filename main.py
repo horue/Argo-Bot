@@ -98,10 +98,6 @@ async def on_member_join(member):
   channel = discord.util.get(member.guild.channel, name='welcome')
   await channel.send(f'Bem vindo, {member.mention}! Lembre-se de tratar todos bem e de se divertir.')
 
-@client.event
-async def on_member_join(member):
-  role = discord.utils.get(member.server.roles, name = '╚ Soldado')
-  await client.add_roles(member, role)
 
 ## Informações ##
 
