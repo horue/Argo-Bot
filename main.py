@@ -7,7 +7,7 @@ import random
 import dotenv
 from dotenv import load_dotenv
 from key import key
-from lists import frases_do_dia, animes, suguestão, traps, bichos, nomesh, sobrenomeh, menos25, mais26, sangue, sanguemm, personalidades, menos25m, mais26m, mahaa, japa
+from lists import frases_do_dia, animes, suguestão, traps, bichos, nomesh, sobrenomeh, menos25, mais26, sangue, sanguemm, personalidades, menos25m, mais26m, mahaa, japa, beijo, abraço, nani
 
 
 
@@ -22,69 +22,7 @@ versao = ('0.0.1')
 
 ## Bancos de dado ##
 
-
 cara_coroa = ["Cara", "Coroa"]
-
-#Gifs#
-
-beijo = [
-  'https://media.giphy.com/media/FqBTvSNjNzeZG/giphy.gif',
-  'https://media.giphy.com/media/N3IuFaIanEs6I/giphy.gif',
-  'https://media.giphy.com/media/jR22gdcPiOLaE/giphy.gif',
-  'https://media.giphy.com/media/87vvTexnItOkE/giphy.gif',
-  'https://media.giphy.com/media/12VXIxKaIEarL2/giphy.gif',
-  'https://media.giphy.com/media/G3va31oEEnIkM/giphy.gif',
-  'https://media.giphy.com/media/zkppEMFvRX5FC/giphy.gif',
-  'https://media.giphy.com/media/kU586ictpGb0Q/giphy.gif',
-  'https://media.giphy.com/media/bm2O3nXTcKJeU/giphy.gif',
-  'https://media.giphy.com/media/nyGFcsP0kAobm/giphy.gif',
-  'https://media.giphy.com/media/QGc8RgRvMonFm/giphy.gif',
-  'https://c.tenor.com/3wE3JNW0fswAAAAC/anime-kiss-love.gif',
-  'https://c.tenor.com/e6cYiAPPCq4AAAAC/anime-kissing.gif',
-  'https://c.tenor.com/bkF2kFvXR50AAAAC/yes-love.gif',
-  'https://c.tenor.com/hjhEoMvMTOIAAAAC/girls-anime.gif',
-]
-abraço = [
-  'https://media.giphy.com/media/WynnqxhdFEPYY/giphy.gif',
-  'https://media.giphy.com/media/du8yT5dStTeMg/giphy.gif',
-  'https://media.giphy.com/media/3ZnBrkqoaI2hq/giphy.gif',
-  'https://media.giphy.com/media/ZQN9jsRWp1M76/giphy.gif',
-  'https://media.giphy.com/media/aD1fI3UUWC4/giphy.gif',
-  'https://media.giphy.com/media/QFPoctlgZ5s0E/giphy.gif',
-  'https://media.giphy.com/media/svXXBgduBsJ1u/giphy.gif',
-  'https://media.giphy.com/media/3bqtLDeiDtwhq/giphy.gif',
-  'https://media.giphy.com/media/wSY4wcrHnB0CA/giphy.gif',
-  'https://media.giphy.com/media/5eyhBKLvYhafu/giphy.gif',
-  'https://media.giphy.com/media/lrr9rHuoJOE0w/giphy.gif',
-  'https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif',
-  'https://media.giphy.com/media/wnsgren9NtITS/giphy.gif',
-  'https://media.giphy.com/media/kvKFM3UWg2P04/giphy.gif',
-  'https://media.giphy.com/media/yziFo5qYAOgY8/giphy.gif',
-  'https://c.tenor.com/Ct4bdr2ZGeAAAAAC/teria-wang-kishuku-gakkou-no-juliet.gif',
-  'https://c.tenor.com/xgVPw2QK5n8AAAAC/sakura-quest-anime.gif',
-  'https://c.tenor.com/X5nBTYuoKpoAAAAC/anime-cheeks.gif',
-  'https://c.tenor.com/9e1aE_xBLCsAAAAC/anime-hug.gif',
-  'https://c.tenor.com/X5nBTYuoKpoAAAAC/anime-cheeks.gif',
-  'https://c.tenor.com/sBFE3GeNpJ4AAAAC/tackle-hug-couple.gif',
-  'https://c.tenor.com/ixaDEFhZJSsAAAAS/anime-choke.gif',
-  'https://c.tenor.com/zirc8LTWVUkAAAAC/hug-anime.gif',
-  'https://c.tenor.com/GJ6oX6r0mZsAAAAC/chuunibyou-anime.gif',
-]
-nani = [
-  'https://static.hentai-gif-anime.com/upload/20160529/16/32051/1.gif',
-  'https://static.hentai-gif-anime.com/upload/20160504/9/18093/detail.gif',
-  'https://static.hentai-gif-anime.com/upload/20160529/16/32049/1.gif',
-  'https://static.hentai-gif-anime.com/upload/20160529/16/32054/1.gif',
-  'https://wetgif.com/wp-content/uploads/gif-hentai-incest-11-22.gif',
-  'https://wetgif.com/wp-content/uploads/gif-hentai-incest-36.gif',
-  'https://wetgif.com/wp-content/uploads/hentai-23.gif',
-  'https://wetgif.com/wp-content/uploads/porno-anime-68.gif',
-  'https://wetgif.com/wp-content/uploads/gif-hentai-incest-40.gif',
-  'https://wetgif.com/wp-content/uploads/gif-hentai-incest-36.gif',
-]
-
-
-
 
 ## Básicos ##
 
