@@ -20,6 +20,11 @@ banners = [
   "https://imgur.com/H6pKvIH"
 ]
 
+
+good_pass = [
+  'consegue efetuar um passe incrível para um companheiro de time!'
+]
+
 ## Inazuma Eleven RPG ##
 
 @client.command()
@@ -37,3 +42,10 @@ async def partida(ctx):
 @client.command()
 async def eventos(ctx):
   await ctx.send(f'O evento atual é: {banner}')
+
+##General Stuff##
+  
+@client.event
+async def on_member_join(member):
+  role = discord.utils.get(member.server.roles, name = '╚ Soldado')
+  await client.add_roles(member, role)
