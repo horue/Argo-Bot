@@ -326,24 +326,6 @@ async def join(ctx):
     await channel.connect()
 
 
-
-
-
-
-## Batalha ##
-
-@client.command()
-async def farm(ctx):
-  await ctx.send(f'Um {random.choice(bichos)} apareceu! O que deseja fazer?\nAtacar\nDefender\nFugir')
-  msg = await client.wait_for('escolha')
-  attempt = int(msg.content)
-  if attempt == 'Atacar':
-    await ctx.send('Você causou X de dano!')
-        
-
-
-
-
 ## Embeds ##
 
 
@@ -380,14 +362,6 @@ async def ajuda(ctx):
 async def avatar_handler(ctx, error):
     if isinstance(error, discord.ext.commands.errors.MissingRequiredArgument):
         await ctx.send(f'Alô? Esqueceu de marcar de quem você quer a foto, {ctx.author.mention}!')
-
-
-
-@anime.error
-async def avatar_handler(ctx, error):
-    if isinstance(error, discord.ext.commands.errors.CommandNotFound):
-        await ctx.send(f'Tá na Disney, meu querido? Esse comando não existe!')
-
 
 
 @anime.error
