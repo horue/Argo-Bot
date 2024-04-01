@@ -49,3 +49,16 @@ async def eventos(ctx):
 async def on_member_join(member):
   role = discord.utils.get(member.server.roles, name = '╚ Soldado')
   await client.add_roles(member, role)
+
+
+## Batalha ##
+
+@client.command()
+async def farm(ctx):
+  await ctx.send(f'Um {random.choice(bichos)} apareceu! O que deseja fazer?\nAtacar\nDefender\nFugir')
+  msg = await client.wait_for('escolha')
+  attempt = int(msg.content)
+  if attempt == 'Atacar':
+    await ctx.send('Você causou X de dano!')
+        
+
