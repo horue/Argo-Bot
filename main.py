@@ -274,8 +274,6 @@ async def sugestão(ctx):
 
 ## Memes ##
 
-
-
    
 
 @client.command(aliases=['sessão?'])
@@ -382,6 +380,14 @@ async def ajuda(ctx):
 async def avatar_handler(ctx, error):
     if isinstance(error, discord.ext.commands.errors.MissingRequiredArgument):
         await ctx.send(f'Alô? Esqueceu de marcar de quem você quer a foto, {ctx.author.mention}!')
+
+
+
+@anime.error
+async def avatar_handler(ctx, error):
+    if isinstance(error, discord.ext.commands.errors.CommandNotFound):
+        await ctx.send(f'Tá na Disney, meu querido? Esse comando não existe!')
+
 
 
 @anime.error
