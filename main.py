@@ -353,7 +353,7 @@ async def ajuda(ctx):
 
   ajuda.set_image(url= 'https://64.media.tumblr.com/554afaca94ce64ce2f1943e373dee212/69093404c1702635-ad/s640x960/5a1c90b56d1e1386234f548c2920c6b4eca80f62.jpg')
 
-  ajuda.set_footer(text= f'Em caso de instabilidade, fale com 𝑯 𝑰 𝑹 𝑶#5692. Atualmente na versão {versao}')
+  ajuda.set_footer(text= f'Em caso de instabilidade, fale com horue_. Atualmente na versão {versao}')
 
   ajuda.add_field(name= 'Jogar um dado', value= 'Para rolar qualquer dado, simplesemente digite o meu prefíxo "-" e o número do dado. Lembrando que eu posso fazer operações matemáticas junto com o resultado.', inline=False)
   ajuda.add_field(name= 'Informações sobre atualizações', value= 'Pra você saber o que eu tenho de novo é só usar o "-log".', inline=False)
