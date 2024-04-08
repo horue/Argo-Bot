@@ -157,6 +157,16 @@ async def roll(ctx, numero=20, conta='', ficha=''):
   await ctx.send(f'{ctx.author.mention} 🎇 \n**Resultado**: D{numero} ({rolagem}) {conta} {ficha}\n**Total**: {total}')
 
 
+@client.command(aliases=['m', 'mr'])
+async def multiroll(ctx, quantidade=1, numero=20):
+  resultados=[]
+  for i in range (quantidade):
+    rolagem=random.randint(1,int(numero))
+    resultados.append(rolagem)
+  await ctx.send(f'{ctx.author.mention} 🎇 \n**Rolagem de**: {quantidade}d{numero}\n**Resultados**: {resultados}')
+
+
+
 @client.command()
 async def moeda(ctx):
   await ctx.send('E o resultado é...')
