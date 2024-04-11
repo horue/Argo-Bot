@@ -1,5 +1,5 @@
 import discord
-from main import *
+from main import versao
 
 
 
