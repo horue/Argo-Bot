@@ -7,7 +7,7 @@ import random
 import dotenv
 from dotenv import load_dotenv
 from key import key
-from lists import frases_do_dia, animes, suguestão, traps, bichos, nomesh, sobrenomeh, menos25, mais26, sangue, sanguemm, personalidades, menos25m, mais26m, mahaa, japa, beijo, abraço, nani
+from lists import *
 
 
 
