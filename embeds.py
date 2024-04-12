@@ -9,7 +9,7 @@ ajuda = discord.Embed(
     color = 2602879
   )
 
-ajuda.set_author(name= f'{ctx.author} chamou por ajuda!', icon_url= 'https://www.tibiawiki.com.br/images/d/d7/Golden_Newspaper.gif')
+ajuda.set_author(name= f'Ajuda foi chamada!', icon_url= 'https://www.tibiawiki.com.br/images/d/d7/Golden_Newspaper.gif')
 
 ajuda.set_thumbnail(url = 'https://www.tibiawiki.com.br/images/d/d7/Golden_Newspaper.gif')
 
