@@ -20,6 +20,9 @@ intents.message_content = True
 bot = client = commands.Bot(command_prefix = '-', case_insensitive = True, activity=discord.Game(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
 versao = ('0.0.1')
 
+## APIS ##
+
+
 
 ## Bancos de dado ##
 
@@ -231,10 +234,11 @@ async def recomendar(ctx):
 
 
 @client.command(aliases=['waifu', 'wa', 'garota', 'girl'])
-async def anime(ctx):
-  await ctx.send('**Via**: https://www.zerochan.net')
-  await ctx.send(random.choice(animes))
-
+async def anime(ctx, typew='sfw', category = 'waifu'):
+  try:
+      await ctx.send(f'https://api.waifu.pics/{typew}/{category}')
+  except:
+     await ctx.send(f'Erro.')
 
 @client.command()
 async def trap(ctx):
