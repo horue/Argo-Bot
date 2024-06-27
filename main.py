@@ -234,9 +234,12 @@ async def recomendar(ctx):
 
 
 @client.command(aliases=['waifu', 'wa', 'garota', 'girl'])
-async def anime(ctx, typew='sfw', category = 'waifu'):
+async def anime(ctx, category = 'waifu'):
   try:
-      await ctx.send(f'https://api.waifu.pics/{typew}/{category}')
+      r = requests.get(f'https://api.waifu.pics/sfw/{category}')
+      data = r.json()
+      url = data['url']
+      await ctx.send(url)
   except:
      await ctx.send(f'Erro.')
 
