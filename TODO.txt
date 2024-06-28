@@ -1,6 +1,6 @@
 Add music function
 (DONE) Make a local librarie for the lists 
-Add ZeroChan API to the -w command
+(DONE) Add ZeroChan API to the -w command
 Add option to custom prefixes
 (WIP) Add new economy funcitons and finish the unfinished ones
 DONE - Remove unused variables (or add it to a new file)
