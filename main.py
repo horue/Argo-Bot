@@ -194,7 +194,7 @@ async def jav(ctx):
 ## Custom Prefix ##
 
 @client.command()
-async def carteira(ctx, prefix: discord.Member):
+async def prefix(ctx, prefix):
   p = open('prefixes.json')
   prefixes = json.load(p)
   server = ctx.message.guild.id
