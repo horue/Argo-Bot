@@ -191,6 +191,15 @@ async def jav(ctx):
   await ctx.send(embed = japae)
 
 
+## Custom Prefix ##
+
+@client.command()
+async def carteira(ctx, user: discord.Member):
+  p = open('prefixes.json')
+  prefixes = json.load(p)
+  
+
+
 
 
 
