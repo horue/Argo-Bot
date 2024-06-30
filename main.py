@@ -194,10 +194,16 @@ async def jav(ctx):
 ## Custom Prefix ##
 
 @client.command()
-async def carteira(ctx, user: discord.Member):
+async def carteira(ctx, prefix: discord.Member):
   p = open('prefixes.json')
   prefixes = json.load(p)
-  
+  server = ctx.message.guild.id
+  structure = {f"{server}": {"prefix": f"{prefix}"}}
+  with open("sample.json", "w"):
+    json.dump(structure, prefixes)
+  await ctx.send(f'O prefixo do servidor foi alterado para {prefix}.')
+
+
 
 
 
