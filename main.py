@@ -15,18 +15,22 @@ from embeds import *
 os.chdir("D:\\Users\\Eu\\Desktop\\(Audiovisual)\\Argo-Bot")
 
 
+async def load_prefix(bot, message):
+  server = str(message.guild.id)
+  try:
+    with open('sample.json', 'rt') as p:
+      prefix = json.load(p)
+    final_prefix = prefix.get(f'{server}',{}).get('prefix', {})
+    return final_prefix
+  except:
+     return '-'
+
 
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = client = commands.Bot(command_prefix = '-', case_insensitive = True, activity=discord.Game(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
+bot = client = commands.Bot(command_prefix = load_prefix, case_insensitive = True, activity=discord.Game(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
 versao = ('0.0.1')
-
-@client.event
-async def load_prefix(ctx):
-  server = ctx.message.guild.id
-  with open('sample.json', 'rt') as p:
-     prefix = p.read()
 
 
 ## Bancos de dado ##
