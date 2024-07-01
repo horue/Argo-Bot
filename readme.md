@@ -35,34 +35,18 @@ Argo-Bot is a multi-functional Discord bot designed to enhance user interactions
 
 1.  Clone the repository:
     
-    sh
-    
-    Copiar código
-    
     `git clone https://github.com/your-username/argo-bot.git
     cd argo-bot` 
     
 2.  Install the required libraries:
     
-    sh
-    
-    Copiar código
-    
     `pip install discord.py requests python-dotenv` 
     
 3.  Set up your environment variables: Create a `.env` file in the root directory of the project and add your bot token:
     
-    env
-    
-    Copiar código
-    
     `DISCORD_TOKEN=your_bot_token_here` 
     
 4.  Create a `key.py` file and add your bot token:
-    
-    python
-    
-    Copiar código
     
     `key = 'your_bot_token_here'` 
     
@@ -78,9 +62,7 @@ Argo-Bot is a multi-functional Discord bot designed to enhance user interactions
 
 This file holds the custom prefixes for each server. Example structure:
 
-json
 
-Copiar código
 
 `{
   "server_id": {
@@ -92,35 +74,28 @@ Copiar código
 
 This file holds various lists used in the bot, such as phrases, anime images, etc. Example:
 
-python
-
-Copiar código
-
-`frases_do_dia = [
-    "Seize the day!",
-    "Carpe Diem!"
-]
-
-suguestão = [
-    "Fullmetal Alchemist: Brotherhood",
-    "Steins;Gate"
-]` 
+    frases_do_dia = [
+        "Seize the day!",
+        "Carpe Diem!"
+    ]
+    
+    suguestão = [
+        "Fullmetal Alchemist: Brotherhood",
+        "Steins;Gate"
+    ]
 
 ### embeds.py
 
 This file contains embedded message templates. Example:
 
-python
 
-Copiar código
-
-`import discord
-
-ajuda = discord.Embed(
-    title = "Ajuda",
-    description = "Lista de comandos disponíveis",
-    color = 0x00ff00
-)` 
+    import discord
+    
+    ajuda = discord.Embed(
+        title = "Ajuda",
+        description = "Lista de comandos disponíveis",
+        color = 0x00ff00
+    )
 
 ## Commands
 
