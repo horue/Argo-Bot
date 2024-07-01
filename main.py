@@ -199,8 +199,8 @@ async def prefix(ctx, prefix):
   prefixes = json.load(p)
   server = ctx.message.guild.id
   structure = {f"{server}": {"prefix": f"{prefix}"}}
-  with open("sample.json", "w"):
-    json.dump(structure, prefixes)
+  with open("sample.json", "w", encoding='utf-8') as f:
+    json.dump(structure, f)
   await ctx.send(f'O prefixo do servidor foi alterado para {prefix}.')
 
 
