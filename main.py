@@ -208,12 +208,12 @@ async def jav(ctx):
 
 @client.command()
 async def prefix(ctx, prefix):
-  p = open('prefixes.json')
-  prefixes = json.load(p)
+  with open('prefixes.json') as p:
+    prefixes = json.load(p)
   server = ctx.message.guild.id
-  structure = {f"{server}": {"prefix": f"{prefix}"}}
+  prefixes[server] = {"prefix": prefix}
   with open("sample.json", "w", encoding='utf-8') as f:
-    json.dump(structure, f)
+    json.dump(prefixes, f, indent=4)
   await ctx.send(f'O prefixo do servidor foi alterado para {prefix}.')
 
 
