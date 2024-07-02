@@ -16,14 +16,14 @@ os.chdir("D:\\Users\\Eu\\Desktop\\(Audiovisual)\\Argo-Bot")
 
 
 async def load_prefix(bot, message):
-  server = str(message.guild.id)
-  try:
-    with open('sample.json', 'rt') as p:
-      prefix = json.load(p)
-    final_prefix = prefix.get(f'{server}',{}).get('prefix', {})
+    server = str(message.guild.id)
+    try:
+        with open('sample.json', 'r', encoding='utf-8') as p:
+            prefixes = json.load(p)
+        final_prefix = prefixes.get(server, {}).get('prefix', '-')
+    except FileNotFoundError:
+        final_prefix = '-'
     return final_prefix
-  except:
-     return '-'
 
 
 
