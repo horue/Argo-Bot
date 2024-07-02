@@ -208,13 +208,16 @@ async def jav(ctx):
 
 @client.command()
 async def prefix(ctx, prefix):
-  with open('prefixes.json') as p:
-    prefixes = json.load(p)
-  server = ctx.message.guild.id
-  prefixes[server] = {"prefix": prefix}
-  with open("sample.json", "w", encoding='utf-8') as f:
-    json.dump(prefixes, f, indent=4)
-  await ctx.send(f'O prefixo do servidor foi alterado para {prefix}.')
+    try:
+        with open('sample.json', 'r', encoding='utf-8') as p:
+            prefixes = json.load(p)
+    except FileNotFoundError:
+        prefixes = {}
+    server_id = str(ctx.message.guild.id)
+    prefixes[server_id] = {"prefix": prefix}
+    with open('sample.json', 'w', encoding='utf-8') as f:
+        json.dump(prefixes, f, indent=4)
+    await ctx.send(f'O prefixo do servidor foi alterado para {prefix}.')
 
 
 
