@@ -209,8 +209,12 @@ async def jav(ctx):
 @client.command()
 async def prefix(ctx, prefix):
     try:
-        with open('sample.json', 'r', encoding='utf-8') as p:
-            prefixes = json.load(p)
+        if prefix == '':
+          final_prefix = load_prefix(bot, message=prefix)
+          await ctx.send(f'O prefixo do servidor é: {final_prefix}')
+        else:
+          with open('sample.json', 'r', encoding='utf-8') as p:
+              prefixes = json.load(p)
     except FileNotFoundError:
         prefixes = {}
     server_id = str(ctx.message.guild.id)
