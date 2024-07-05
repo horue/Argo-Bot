@@ -10,3 +10,4 @@ Add an option to change language
 Add blocking words option
 Add a way to user ser prohibited words
 Add JAV Pics via API
+Add embeds to -w command image
