@@ -124,6 +124,9 @@ bichos = [
 banners = [
   "https://imgur.com/H6pKvIH"
 ]
+
+## Personagens ##
+
 nomesh = [
   "Naru",
   "Oye",
