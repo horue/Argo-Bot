@@ -121,7 +121,7 @@ async def moeda(ctx):
 
 
 
-@client.command()
+@client.command(aliases=['quantia', 'a'])
 async def amount(ctx):
   dproll = random.randint(100,500)
   await ctx.send(f'{ctx.author.mention} 🎇 \n**Como resultado desse duelo, você ganhou**: {dproll}')
