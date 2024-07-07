@@ -121,8 +121,8 @@ async def moeda(ctx):
 
 
 
-@client.command(aliases=['dilmas pernetas', 'dinossauros pelados', 'duas peles'])
-async def dp(ctx):
+@client.command()
+async def amount(ctx):
   dproll = random.randint(100,500)
   await ctx.send(f'{ctx.author.mention} 🎇 \n**Como resultado desse duelo, você ganhou**: {dproll}')
 
@@ -222,11 +222,6 @@ async def prefix(ctx, prefix):
     with open('sample.json', 'w', encoding='utf-8') as f:
         json.dump(prefixes, f, indent=4)
     await ctx.send(f'O prefixo do servidor foi alterado para {prefix}.')
-
-
-
-
-
 
 
 ## Utilidades ##
