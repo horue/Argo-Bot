@@ -259,16 +259,6 @@ async def recomendar(ctx):
   await ctx.send(f'**{ctx.author.mention}, minha recomendação pra você é**: {random.choice(suguestão)}')
 
 
-@client.command(aliases=['waifu', 'wa', 'garota', 'girl'])
-async def anime(ctx, category = 'waifu'):
-  try:
-      r = requests.get(f'https://api.waifu.pics/sfw/{category}')
-      data = r.json()
-      url = data['url']
-      await ctx.send(url)
-  except:
-     await ctx.send(f'Erro.')
-
 @client.command()
 async def trap(ctx):
   await ctx.send(random.choice(traps))
@@ -283,6 +273,22 @@ async def pobre(ctx):
 @client.command()
 async def multi(ctx):
   await ctx.send('esse jogo e multi, voces nao tem idea da mídia do ps4 eles pagam pelo jogo que voces jogam sao mais caros e mais evoluídos assim e diferente e voce nunca ira entender pois sao infieis ao console')
+
+
+## Images ##
+
+
+@client.command(aliases=['waifu', 'wa', 'garota', 'girl'])
+async def anime(ctx, category = 'waifu'):
+  try:
+      r = requests.get(f'https://api.waifu.pics/sfw/{category}')
+      data = r.json()
+      url = data['url']
+      await ctx.send(url)
+  except:
+     await ctx.send(f'Erro.')
+
+
 
 
 ## Música ##
