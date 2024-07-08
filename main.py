@@ -230,7 +230,7 @@ async def prefix(ctx, prefix):
 async def version(ctx):
   await ctx.send(f'Atualmente me encontro na versão {versao}.')
 
-@client.command(aliases=['foto', 'perfil', 'imagem', 'profile'])
+@client.command(aliases=['foto', 'imagem'])
 async def avatar(ctx, member: discord.Member):
   show_avatar = discord.Embed(
     title = f'Aqui está a foto dele, senhor {ctx.author}',
