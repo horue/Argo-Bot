@@ -4,8 +4,6 @@ import os
 import requests
 import json
 import random
-import dotenv
-from dotenv import load_dotenv
 from key import key
 from lists import *
 from embeds import *
@@ -287,6 +285,14 @@ async def anime(ctx, category = 'waifu'):
       await ctx.send(url)
   except:
      await ctx.send(f'Erro.')
+
+
+@client.command()
+async def art(ctx):
+  try:
+    print(1)
+  except:
+    print('a')
 
 
 
