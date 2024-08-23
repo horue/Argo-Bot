@@ -290,3 +290,7 @@ animes = [
   "https://static.zerochan.net/Rem.%28Re%3AZero%29.full.3309818.jpg"
 ]
 
+@client.event
+async def on_member_join(member):
+  channel = discord.util.get(member.guild.channel, name='welcome')
+  await channel.send(f'Bem vindo, {member.mention}! Lembre-se de tratar todos bem e de se divertir.')

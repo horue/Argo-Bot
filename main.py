@@ -42,11 +42,6 @@ cara_coroa = ["Cara", "Coroa"]
 async def on_ready():
   print('Entramos como {0.user}' . format(client))
 
-@client.event
-async def on_member_join(member):
-  channel = discord.util.get(member.guild.channel, name='welcome')
-  await channel.send(f'Bem vindo, {member.mention}! Lembre-se de tratar todos bem e de se divertir.')
-
 
 ## Informações ##
 
