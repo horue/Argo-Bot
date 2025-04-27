@@ -29,6 +29,8 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = client = commands.Bot(command_prefix = load_prefix, case_insensitive = True, activity=discord.Game(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
 versao = ('0.1.0')
+log_file = open("new.log", 'r', encoding='utf-8').read()
+
 
 
 ## Bancos de dado ##
@@ -48,7 +50,11 @@ async def on_ready():
 
 @client.command()
 async def log(ctx):
-  await ctx.send('Agora estou imparável!\nAntes de ir pras novidades, vamos as coisas que foram consertadas"\nAgora quando uma operação, usando os dados, daria um número negativo, ele vira 1! Até porque é impossível um dado negativo.\nForam adicionadas MUITAS novas imagens ao comando "anime", além disso também da pra ativar ele usando o "-wa".\nOutra coisa muito importante é que o "-avatar" foi muito implementado"! Agora quando tiver algo faltando ou algo de errado eu vou te avisar.\nAgora a única novidade dessa versão é que eu posso sugerir animes agora! Isso mesmo. Usando o comando "-sugerir" vou te sugerir um anime, acompanhado da página dele no MAL.\nPor fim, existem duas funções que estão sendo desenvolvidas. Por serem meio complexas, é capaz que ainda demore um pouco até eu ser capaz de fazê-las.\nEntão é isso, até a próxima versão!')
+  try:
+    await ctx.send(log_file)
+  except:
+    await ctx.send('Ops! Algum erro ocorreu enquanto eu tentava te mandar as novidades! Tenta de novo mais tarde!')
+
 
 
 @client.command(aliases=['bom dia', 'boa tarde', 'boa noite'])
@@ -328,6 +334,8 @@ async def ajuda(ctx):
 
 
 ## Erros ##
+
+
 
 @avatar.error
 async def avatar_handler(ctx, error):
