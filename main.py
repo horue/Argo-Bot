@@ -348,5 +348,10 @@ async def avatar_handler(ctx, error):
     if isinstance(error, discord.ext.commands.errors.CommandNotFound):
         await ctx.send(f'Tá na Disney, meu querido? Esse comando não existe!')
 
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send("Ei, se liga! Esse comando não existe!")
+
 
 client.run(key)
