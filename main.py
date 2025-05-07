@@ -244,7 +244,7 @@ async def avatar(ctx, member: discord.Member):
     title = f'Aqui está a foto dele, senhor {ctx.author}',
     color = 2602879
   )
-  show_avatar.set_image(url='{}'.format(member.avatar_url))
+  show_avatar.set_image(url='{}'.format(member.display_avatar.url))
   await ctx.send(f'{ctx.author.mention}', embed=show_avatar)
 
 
