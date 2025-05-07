@@ -27,7 +27,7 @@ async def load_prefix(bot, message):
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = client = commands.Bot(command_prefix = load_prefix, case_insensitive = True, activity=discord.Game(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
+bot = client = commands.Bot(command_prefix = load_prefix, case_insensitive = True, activity=discord.CustomActivity(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
 versao = ('0.1.0')
 log_file = open("new.log", 'r', encoding='utf-8').read()
 
