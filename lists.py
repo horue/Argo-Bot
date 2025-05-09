@@ -317,3 +317,7 @@ nani = [
   'https://wetgif.com/wp-content/uploads/gif-hentai-incest-40.gif',
   'https://wetgif.com/wp-content/uploads/gif-hentai-incest-36.gif',
 ]
+error_message=[
+    "Ei, se liga! Esse comando não existe!",
+    'Tá na Disney, meu querido? Esse comando não existe!'
+]
