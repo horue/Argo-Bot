@@ -351,7 +351,7 @@ async def avatar_handler(ctx, error):
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("Ei, se liga! Esse comando não existe!")
+        await ctx.send(random.choice(error_message))
 
 
 client.run(key)
