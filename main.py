@@ -4,6 +4,7 @@ import os
 import requests
 import json
 import random
+import datetime
 from key import key
 from lists import *
 from embeds import *
@@ -42,7 +43,10 @@ cara_coroa = ["Cara", "Coroa"]
 
 @client.event
 async def on_ready():
+  now = datetime.datetime.now()
+  formatted_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
   print('Entramos como {0.user}' . format(client))
+  print(f'{formatted_datetime} {'INFO'}     Success: ' + 'logged in with '+'{0.user}' . format(bot))
 
 
 ## Informações ##
