@@ -8,7 +8,7 @@ import datetime
 from key import key
 from lists import *
 from embeds import *
-
+from modules.info import *
 
 
 os.chdir("D:\\Users\\Eu\\Desktop\\(Audiovisual)\\Argo-Bot")
@@ -54,11 +54,7 @@ async def on_ready():
 
 @client.command()
 async def log(ctx):
-  try:
-    await ctx.send(log_file)
-  except:
-    await ctx.send('Ops! Algum erro ocorreu enquanto eu tentava te mandar as novidades! Tenta de novo mais tarde!')
-
+  await Info.log(ctx)
 
 
 @client.command(aliases=['bom dia', 'boa tarde', 'boa noite'])
@@ -72,11 +68,12 @@ async def frase(ctx):
 
 @client.command()
 async def servidor(ctx):
-  await ctx.send(f'Sinta-se livre para entrar no meu servidor oficial, {ctx.author.mention}!\nAqui está o link: https://discord.gg/t2HBP7q37s')
+  await Info.servidor(ctx)
+
 
 @client.command()
 async def l(ctx):
-  await ctx.send("I lived, Bithces.")
+  await Info.l(ctx)
 
 
 ## Rolls ##
