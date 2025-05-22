@@ -2,6 +2,7 @@ from discord.ext import commands
 from discord import app_commands
 from discord.ext.commands import Context
 from discord import Interaction
+from main import versao
 
 log_file = open("change.log", 'r', encoding='utf-8').read()
 
@@ -16,6 +17,10 @@ class Info():
     @staticmethod
     async def servidor(ctx):
         await ctx.send(f'Sinta-se livre para entrar no meu servidor oficial, {ctx.author.mention}!\nAqui está o link: https://discord.gg/t2HBP7q37s')
+
+    @staticmethod
+    async def version(ctx):
+        await ctx.send(f'Atualmente me encontro na versão {versao}.')
 
     @staticmethod
     async def l(ctx):
