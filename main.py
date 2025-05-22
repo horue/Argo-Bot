@@ -54,6 +54,11 @@ async def on_ready():
 @client.command()
 async def log(ctx):
   await Info.log(ctx)
+  
+
+@client.command(aliases=['versão', 'versao', 'ver'])
+async def version(ctx):
+  await Info.version(ctx)
 
 
 @client.command(aliases=['bom dia', 'boa tarde', 'boa noite'])
@@ -194,9 +199,6 @@ async def prefix(ctx, prefix):
 
 ## Utilidades ##
 
-@client.command(aliases=['versão', 'versao', 'ver'])
-async def version(ctx):
-  await ctx.send(f'Atualmente me encontro na versão {versao}.')
 
 @client.command(aliases=['foto', 'imagem'])
 async def avatar(ctx, member: discord.Member):
