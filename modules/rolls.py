@@ -47,4 +47,11 @@ class Dice():
 
 
 class Coin():
-    pass
+    async def moeda(ctx):
+        result = random.randint(0,1)
+        await ctx.send('E o resultado é...')
+        await ctx.send('...')
+        if result == 0:
+            await ctx.send('Cara!')
+        elif result == 1:
+             await ctx.send('Coroa!')
