@@ -9,7 +9,10 @@ from key import key
 from lists import *
 from modules.info import *
 from modules.rolls import *
+from modules.generators import *
+
 from assets.colors import *
+
 #from embeds.help import *
 
 
@@ -30,7 +33,12 @@ async def load_prefix(bot, message):
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = client = commands.Bot(command_prefix = load_prefix, case_insensitive = True, activity=discord.CustomActivity(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
+bot = client = commands.Bot(
+   command_prefix = load_prefix,
+   case_insensitive = True,
+   activity=discord.CustomActivity(name="Para ajuda use '-ajuda'"),
+   status=discord.Status.online,
+   intents=intents)
 versao = ('0.1.0')
 
 
@@ -54,7 +62,7 @@ async def on_ready():
 @client.command()
 async def log(ctx):
   await Info.log(ctx)
-  
+
 
 @client.command(aliases=['versão', 'versao', 'ver'])
 async def version(ctx):
@@ -100,26 +108,25 @@ async def amount(ctx,min=100,max=500):
   await ctx.send(f'{ctx.author.mention} 🎇 \n**Como resultado desse duelo, você ganhou**: {amount}')
 
 
+## Character Generation ##
+
+
 @client.command()
 async def per(ctx):
-  idade = random.randint(14,60)
-  jobb = random.choice(menos25) if idade <= 25 else random.choice(mais26)
-  tipos = random.choice(sangue) + random.choice(sanguemm)
-  persona= random.choice(personalidades)
-  await ctx.send(f'`Nome:{random.choice(nomesh)} {random.choice(sobrenomeh)}\nIdade: {idade}\nTipo Sanguíneo: {tipos}\nOcupação: {jobb}\nPersonalidade: {persona}`')
+  await CharacterCreator.modernCharacter(ctx)
 
 
 @client.command(aliases=['personagem medieval'])
 async def permedi(ctx):
-  idade = random.randint(20,60)
-  jobb = random.choice(menos25m) if idade <= 25 else random.choice(mais26m)
-  tipos = random.choice(sangue) + random.choice(sanguemm)
-  persona= random.choice(personalidades)
-  await ctx.send(f'`Nome:{random.choice(nomesh)} {random.choice(sobrenomeh)}\nIdade: {idade}\nTipo Sanguíneo: {tipos}\nOcupação: {jobb}\nPersonalidade: {persona}`')
+  await CharacterCreator.medievalCharacter(ctx)
 
 @client.command()
 async def maha(ctx):
   await ctx.send(random.choice(mahaa))
+
+
+## Member Interactions ##
+
 
 @client.command()
 async def hug(ctx, user: discord.Member):
