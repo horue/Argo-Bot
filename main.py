@@ -7,9 +7,10 @@ import random
 import datetime
 from key import key
 from lists import *
-from embeds import *
 from modules.info import *
 from modules.rolls import *
+from assets.colors import *
+#from embeds.help import *
 
 
 os.chdir("D:\\Users\\Eu\\Desktop\\(Audiovisual)\\Argo-Bot")
@@ -31,7 +32,6 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = client = commands.Bot(command_prefix = load_prefix, case_insensitive = True, activity=discord.CustomActivity(name="Para ajuda use '-ajuda'"), status=discord.Status.online, intents=intents)
 versao = ('0.1.0')
-log_file = open("new.log", 'r', encoding='utf-8').read()
 
 
 
@@ -46,9 +46,7 @@ cara_coroa = ["Cara", "Coroa"]
 async def on_ready():
   now = datetime.datetime.now()
   formatted_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
-  print('Entramos como {0.user}' . format(client))
-  print(f'{formatted_datetime} {'INFO'}     Success: ' + 'logged in with '+'{0.user}' . format(bot))
-
+  print(f'{GREY}{formatted_datetime}{RESET} {BLUE}{'INFO'}{RESET}     {GREEN}Success: {RESET}' + 'logged in with '+'{0.user}' . format(bot))
 
 ## Informações ##
 
@@ -92,7 +90,7 @@ async def moeda(ctx):
 
 
 @client.command(aliases=['quantia', 'a'])
-async def amount(ctx,min=500,max=500):
+async def amount(ctx,min=100,max=500):
   amount = random.randint(min,max)
   await ctx.send(f'{ctx.author.mention} 🎇 \n**Como resultado desse duelo, você ganhou**: {amount}')
 
@@ -290,9 +288,9 @@ async def join(ctx):
 ## Embeds ##
 
 
-@client.command()
-async def ajuda(ctx):
-  await ctx.send(embed = ajuda)
+#@client.command()
+#async def ajudaa(ctx):
+#  await ctx.send(embed = ajuda)
 
 
 ## Erros ##
