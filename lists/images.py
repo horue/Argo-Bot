@@ -1,0 +1,47 @@
+class Person():
+    JAV = [
+        'https://javhd.pics/media/japanese/yua-mikami/64/hd-yua-mikami-11.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/64/hd-yua-mikami-1.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/64/hd-yua-mikami-2.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/24/hd-yua-mikami-1.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/24/hd-yua-mikami-2.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/24/hd-yua-mikami-3.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/24/hd-yua-mikami-4.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/54/hd-yua-mikami-2.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/54/hd-yua-mikami-3.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/60/hd-yua-mikami-7.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/60/hd-yua-mikami-10.jpg',
+        'https://javhd.pics/media/japanese/yua-mikami/30/hd-yua-mikami-1.jpg',
+    ]
+
+class Anime():
+    traps = [
+        "https://static.zerochan.net/Saber.%28Astolfo%29.full.3011262.png",
+        "https://static.zerochan.net/Saber.%28Astolfo%29.full.2784350.png",
+        "https://static.zerochan.net/Saber.%28Astolfo%29.full.2814588.png",
+        "https://static.zerochan.net/Saber.%28Astolfo%29.full.3006281.png",
+        "https://static.zerochan.net/Felix.Argyle.full.2018176.jpg",
+        "https://static.zerochan.net/Felix.Argyle.full.2012123.jpg",
+        "https://static.zerochan.net/Kinoshita.Hideyoshi.full.986490.jpg",
+        "https://static.zerochan.net/Kinoshita.Hideyoshi.full.161684.jpg",
+        "https://static.zerochan.net/Kinoshita.Hideyoshi.full.416806.jpg",
+        "https://static.zerochan.net/Amane.Nishiki.full.1246052.jpg",
+        "https://static.zerochan.net/Amane.Nishiki.full.1426197.jpg",
+        "https://static.zerochan.net/Amane.Nishiki.full.1399837.jpg",
+        "https://static.zerochan.net/Cross-Over.full.965276.jpg",
+        "https://static.zerochan.net/Fisheye.full.3183737.jpg",
+        "https://static.zerochan.net/Fisheye.full.3153944.jpg",
+        "https://static.zerochan.net/Fisheye.full.3169836.jpg",
+        "https://static.zerochan.net/Hacka.Doll.No..3.full.1956604.jpg",
+        "https://static.zerochan.net/Hacka.Doll.No..3.full.1958301.jpg",
+        "https://static.zerochan.net/Arikawa.Hime.full.1796751.jpg",
+        "https://static.zerochan.net/Arikawa.Hime.full.2119363.jpg",
+        "https://static.zerochan.net/Arikawa.Hime.full.2626797.jpg",
+        "https://static.zerochan.net/Arikawa.Hime.full.2119364.jpg",
+        "https://static.zerochan.net/Arikawa.Hime.full.2255298.png",
+        "https://static.zerochan.net/Arikawa.Hime.full.2213820.png",
+        "https://static.zerochan.net/Yuuki.Kei.full.537233.jpg",
+        "https://static.zerochan.net/Moyashimon.full.513110.jpg",
+        "https://static.zerochan.net/Ansatsu.Kyoushitsu.full.1924891.jpg",
+        "https://static.zerochan.net/Shiota.Nagisa.full.1929898.jpg"
+    ]
