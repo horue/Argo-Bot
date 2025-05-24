@@ -10,6 +10,7 @@ import random
 
 
 class Interact():
+    @staticmethod
     async def hug(ctx, user: discord.Member):
         abraçoe = discord.Embed(
             title = f'Olha que fofinhos!',
@@ -22,7 +23,7 @@ class Interact():
         await ctx.send(f'**{ctx.author.mention} e {user.mention}**')
         await ctx.send(embed = abraçoe)
 
-
+    @staticmethod
     async def kiss(ctx, user: discord.Member):
         beijoe = discord.Embed(
             title = f'Que isso meu patrão!',
@@ -35,7 +36,7 @@ class Interact():
         await ctx.send(f'**{ctx.author.mention} e {user.mention}**')
         await ctx.send(embed = beijoe)
 
-
+    @staticmethod
     async def eat(ctx, user: discord.Member):
         nanie = discord.Embed(
             title = f'Pode isso, Arnaldo?!',
