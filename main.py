@@ -11,6 +11,8 @@ from modules.info import *
 from modules.rolls import *
 from modules.generators import *
 from modules.interactions import *
+from modules.images import *
+from modules.miscellaneous import *
 
 from assets.colors import *
 
@@ -200,29 +202,28 @@ async def sugestão(ctx):
 
 @client.command(aliases=['sessão?'])
 async def sessão(ctx):
-  await ctx.send('Eu ouvi sessão?')
+  await Misc.sessão(ctx)
 
 
 @client.command(aliases=['rec', 'sug', 'sugerir'])
 async def recomendar(ctx):
-  await ctx.send(f'**{ctx.author.mention}, minha recomendação pra você é**: {random.choice(suguestão)}')
+  await Misc.recomendar(ctx)
 
 
 @client.command()
 async def trap(ctx):
-  await ctx.send(random.choice(traps))
+  await Anime.traps(ctx)
 
 
 
 @client.command()
 async def pobre(ctx):
-  await ctx.send ('https://imgur.com/S8uJQVm')
+  await Misc.pobre(ctx)
 
 
 @client.command()
 async def multi(ctx):
-  await ctx.send('esse jogo e multi, voces nao tem idea da mídia do ps4 eles pagam pelo jogo que voces jogam sao mais caros e mais evoluídos assim e diferente e voce nunca ira entender pois sao infieis ao console')
-
+  await Misc.multi(ctx)
 
 ## Images ##
 
