@@ -7,8 +7,6 @@ from discord import Embed
 from lists.interactions import *
 from lists.images import *
 from utils.recomendations import *
-import random
-import requests
 
 
 class Misc():
@@ -19,12 +17,6 @@ class Misc():
     async def recomendar(ctx):
         url, title = mandar()
         await ctx.send(f'**{ctx.author.mention}, minha recomendação pra você é**: {title}\n{url}')
-
-
-    async def trap(ctx):
-        await ctx.send(random.choice(Anime.traps))
-
-
 
     async def pobre(ctx):
         await ctx.send ('https://imgur.com/S8uJQVm')
