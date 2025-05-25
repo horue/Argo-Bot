@@ -10,6 +10,7 @@ from lists import *
 from modules.info import *
 from modules.rolls import *
 from modules.generators import *
+from modules.interactions import *
 
 from assets.colors import *
 
@@ -130,45 +131,16 @@ async def maha(ctx):
 
 @client.command()
 async def hug(ctx, user: discord.Member):
-  abraçoe = discord.Embed(
-    title = f'Olha que fofinhos!',
-    description = f'{ctx.author.mention} abraçou {user.mention}',
-    color = 2602879
-  )
-
-  abraçoe.set_image(url=(random.choice(abraço)))
-  
-  await ctx.send(f'**{ctx.author.mention} e {user.mention}**')
-  await ctx.send(embed = abraçoe)
-
+  await Interaction.hug(ctx, user)
 
 @client.command()
 async def kiss(ctx, user: discord.Member):
-  beijoe = discord.Embed(
-    title = f'Que isso meu patrão!',
-    description = f'{ctx.author.mention} beijou {user.mention}',
-    color = 2602879
-  )
-
-  beijoe.set_image(url=(random.choice(beijo)))
-  
-  await ctx.send(f'**{ctx.author.mention} e {user.mention}**')
-  await ctx.send(embed = beijoe)
+  await Interaction.kiss(ctx, user)
 
 
 @client.command()
 async def eat(ctx, user: discord.Member):
-  nanie = discord.Embed(
-    title = f'Pode isso, Arnaldo?!',
-    description = f'{ctx.author.mention} está fazendo coisas com {user.mention}',
-    color = 2602879
-  )
-
-  nanie.set_image(url=(random.choice(nani)))
-  
-  await ctx.send(f'**{ctx.author.mention} e {user.mention}**')
-  await ctx.send(embed = nanie)
-
+  await Interaction.nani(ctx, user)
 
 @client.command()
 async def jav(ctx):
