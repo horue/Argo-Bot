@@ -11,6 +11,20 @@ import random
 
 
 
-class Animes():
+class AnimeImage():
     async def trap(ctx):
         await ctx.send(random.choice(Anime.traps))
+
+
+
+    async def waifu(ctx, category):
+        if category == '':
+            category = 'waifu'
+        try:
+            r = requests.get(f'https://api.waifu.pics/sfw/{category}')
+            data = r.json()
+            url = data['url']
+            await ctx.send(url)
+        except:
+            await ctx.send(f'Erro.')
+
