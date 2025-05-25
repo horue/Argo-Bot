@@ -6,7 +6,6 @@ import json
 import random
 import datetime
 from key import key
-from lists import *
 from modules.info import *
 from modules.rolls import *
 from modules.generators import *
@@ -211,12 +210,6 @@ async def recomendar(ctx):
 
 
 @client.command()
-async def trap(ctx):
-  await Anime.traps(ctx)
-
-
-
-@client.command()
 async def pobre(ctx):
   await Misc.pobre(ctx)
 
@@ -229,14 +222,14 @@ async def multi(ctx):
 
 
 @client.command(aliases=['waifu', 'wa', 'garota', 'girl'])
-async def anime(ctx, category = 'waifu'):
-  try:
-      r = requests.get(f'https://api.waifu.pics/sfw/{category}')
-      data = r.json()
-      url = data['url']
-      await ctx.send(url)
-  except:
-     await ctx.send(f'Erro.')
+async def anime(ctx, category):
+  await AnimeImage.waifu(ctx, category)
+
+
+@client.command()
+async def trap(ctx):
+  await AnimeImage.trap(ctx)
+
 
 
 @client.command()
