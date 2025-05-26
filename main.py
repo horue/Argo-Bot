@@ -11,6 +11,7 @@ from modules.rolls import *
 from modules.generators import *
 from modules.interactions import *
 from modules.images import *
+from modules.phrases import *
 from modules.miscellaneous import *
 
 from assets.colors import *
@@ -77,7 +78,7 @@ async def olá(ctx):
 
 @client.command()
 async def frase(ctx):
-  await ctx.send(random.choice(frases_do_dia))
+  await Quote.qotd(ctx)
 
 
 @client.command()
@@ -124,7 +125,7 @@ async def permedi(ctx):
 
 @client.command()
 async def maha(ctx):
-  await ctx.send(random.choice(mahaa))
+  await Quote.maha(ctx)
 
 
 ## Member Interactions ##
