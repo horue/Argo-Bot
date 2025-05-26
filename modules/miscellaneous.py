@@ -6,7 +6,7 @@ from discord import Interaction
 from discord import Embed
 from lists.interactions import *
 from lists.images import *
-from utils.recomendations import *
+from .utils.recomendations import *
 
 
 class Misc():
