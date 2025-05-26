@@ -2,9 +2,10 @@ from discord.ext import commands
 from discord import app_commands
 from discord.ext.commands import Context
 from discord import Interaction
-from main import versao
 
 log_file = open("change.log", 'r', encoding='utf-8').read()
+versao = ('0.1.0')
+
 
 class Info():
     @staticmethod
