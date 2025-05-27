@@ -13,19 +13,19 @@ from modules.interactions import *
 from modules.images import *
 from modules.phrases import *
 from modules.miscellaneous import *
+from modules.error_handler import *
 
 from assets.colors import *
 
 #from embeds.help import *
 
 
-os.chdir("D:\\Users\\Eu\\Desktop\\(Audiovisual)\\Argo-Bot")
 
 
 async def load_prefix(bot, message):
     server = str(message.guild.id)
     try:
-        with open('sample.json', 'r', encoding='utf-8') as p:
+        with open(r'common_data\prefixes.json', 'r', encoding='utf-8') as p:
             prefixes = json.load(p)
         final_prefix = prefixes.get(server, {}).get('prefix', '-')
     except FileNotFoundError:
@@ -132,30 +132,31 @@ async def maha(ctx):
 
 
 @client.command()
-async def hug(ctx, user: discord.Member):
-  await Interaction.hug(ctx, user)
+async def hug(ctx, member: discord.Member):
+  user = member
+  await Interact.hug(ctx, user)
 
 @client.command()
 async def kiss(ctx, user: discord.Member):
-  await Interaction.kiss(ctx, user)
+  await Interact.kiss(ctx, user)
 
 
 @client.command()
 async def eat(ctx, user: discord.Member):
-  await Interaction.nani(ctx, user)
+  await Interact.nani(ctx, user)
 
-@client.command()
-async def jav(ctx):
-  japae = discord.Embed(
-    title = f'As coisas estão ficando quentes por aqui!',
-    description = f'{ctx.author.mention} eu não acredito que você está vendo esse tipo de coisa!',
-    color = 2602879
-  )
+#@client.command()
+#async def jav(ctx):
+#  japae = discord.Embed(
+#    title = f'As coisas estão ficando quentes por aqui!',
+#    description = f'{ctx.author.mention} eu não acredito que você está vendo esse tipo de coisa!',
+#    color = 2602879
+#  )
 
-  japae.set_image(url=(random.choice(japa)))
+#  japae.set_image(url=(random.choice(japa)))
   
-  await ctx.send(f'**{ctx.author.mention}**')
-  await ctx.send(embed = japae)
+#  await ctx.send(f'**{ctx.author.mention}**')
+#  await ctx.send(embed = japae)
 
 
 ## Custom Prefix ##
@@ -167,13 +168,13 @@ async def prefix(ctx, prefix):
           final_prefix = load_prefix(bot, message=prefix)
           await ctx.send(f'O prefixo do servidor é: {final_prefix}')
         else:
-          with open('sample.json', 'r', encoding='utf-8') as p:
+          with open(r'common_data\prefixes.json', 'r', encoding='utf-8') as p:
               prefixes = json.load(p)
     except FileNotFoundError:
         prefixes = {}
     server_id = str(ctx.message.guild.id)
     prefixes[server_id] = {"prefix": prefix}
-    with open('sample.json', 'w', encoding='utf-8') as f:
+    with open(r'common_data\prefixes.json', 'w', encoding='utf-8') as f:
         json.dump(prefixes, f, indent=4)
     await ctx.send(f'O prefixo do servidor foi alterado para {prefix}.')
 
@@ -286,8 +287,7 @@ async def avatar_handler(ctx, error):
 
 @bot.event
 async def on_command_error(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
-        await ctx.send(random.choice(error_message))
+    await ErrorHandler.on_command_error(ctx, error)
 
 
 client.run(key)
