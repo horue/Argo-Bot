@@ -16,6 +16,7 @@ from modules.miscellaneous import *
 from modules.error_handler import *
 
 from assets.colors import *
+from assets.support_functions import *
 
 #from embeds.help import *
 
@@ -52,12 +53,10 @@ cara_coroa = ["Cara", "Coroa"]
 
 ## Básicos ##
 
-
 @bot.event
 async def on_ready():
-  now = datetime.datetime.now()
-  formatted_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
-  print(f'{GREY}{formatted_datetime}{RESET} {BLUE}{'INFO'}{RESET}     {GREEN}Success: {RESET}' + 'logged in with '+'{0.user}' . format(bot))
+  formated_print('INFO', 'Success:', 'logged in with ')
+  print('{0.user}' . format(bot))
 
 ## Informações ##
 
@@ -280,6 +279,7 @@ async def on_command_error(ctx, error):
 def run_bot():
   os.system('cls')
   bot.run(key)
+
 
 if __name__ == "__main__":
   run_bot()
