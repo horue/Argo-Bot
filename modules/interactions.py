@@ -11,7 +11,7 @@ import random
 
 class Interact():
     @staticmethod
-    async def hug(ctx, user: discord.Member):
+    async def hug(ctx, user):
         abraçoe = discord.Embed(
             title = f'Olha que fofinhos!',
             description = f'{ctx.author.mention} abraçou {user.mention}',
@@ -24,7 +24,7 @@ class Interact():
         await ctx.send(embed = abraçoe)
 
     @staticmethod
-    async def kiss(ctx, user: discord.Member):
+    async def kiss(ctx, user):
         beijoe = discord.Embed(
             title = f'Que isso meu patrão!',
             description = f'{ctx.author.mention} beijou {user.mention}',
@@ -37,7 +37,7 @@ class Interact():
         await ctx.send(embed = beijoe)
 
     @staticmethod
-    async def eat(ctx, user: discord.Member):
+    async def eat(ctx, user):
         nanie = discord.Embed(
             title = f'Pode isso, Arnaldo?!',
             description = f'{ctx.author.mention} está fazendo coisas com {user.mention}',
