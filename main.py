@@ -37,7 +37,7 @@ async def load_prefix(bot, message):
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = client = commands.Bot(
+bot = commands.Bot(
    command_prefix = load_prefix,
    case_insensitive = True,
    activity=discord.CustomActivity(name="Para ajuda use '-ajuda'"),
@@ -54,7 +54,7 @@ cara_coroa = ["Cara", "Coroa"]
 ## Básicos ##
 
 
-@client.event
+@bot.event
 async def on_ready():
   now = datetime.datetime.now()
   formatted_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -63,31 +63,31 @@ async def on_ready():
 ## Informações ##
 
 
-@client.command()
+@bot.command()
 async def log(ctx):
   await Info.log(ctx)
 
 
-@client.command(aliases=['versão', 'versao', 'ver'])
+@bot.command(aliases=['versão', 'versao', 'ver'])
 async def version(ctx):
   await Info.version(ctx)
 
 
-@client.command(aliases=['bom dia', 'boa tarde', 'boa noite'])
+@bot.command(aliases=['bom dia', 'boa tarde', 'boa noite'])
 async def olá(ctx):
   await ctx.send(f'Sempre é hora de dar um bom dia. Então, bom dia, {ctx.author.mention}!')
 
-@client.command()
+@bot.command()
 async def frase(ctx):
   await Quote.qotd(ctx)
 
 
-@client.command()
+@bot.command()
 async def servidor(ctx):
   await Info.servidor(ctx)
 
 
-@client.command()
+@bot.command()
 async def l(ctx):
   await Info.l(ctx)
 
@@ -95,18 +95,18 @@ async def l(ctx):
 ## Rolls ##
 
 
-@client.command(aliases=['r', 'dado', 'dice'])
+@bot.command(aliases=['r', 'dado', 'dice'])
 async def roll(ctx, info, conta='', ficha=''):
   await Dice.roll(ctx, info, conta, ficha)
 
 
 
-@client.command()
+@bot.command()
 async def moeda(ctx):
   await Coin.moeda(ctx)
 
 
-@client.command(aliases=['quantia', 'a'])
+@bot.command(aliases=['quantia', 'a'])
 async def amount(ctx,min=100,max=500):
   amount = random.randint(min,max)
   await ctx.send(f'{ctx.author.mention} 🎇 \n**Como resultado desse duelo, você ganhou**: {amount}')
@@ -115,16 +115,16 @@ async def amount(ctx,min=100,max=500):
 ## Character Generation ##
 
 
-@client.command()
+@bot.command()
 async def per(ctx):
   await CharacterCreator.modernCharacter(ctx)
 
 
-@client.command(aliases=['personagem medieval'])
+@bot.command(aliases=['personagem medieval'])
 async def permedi(ctx):
   await CharacterCreator.medievalCharacter(ctx)
 
-@client.command()
+@bot.command()
 async def maha(ctx):
   await Quote.maha(ctx)
 
@@ -132,24 +132,24 @@ async def maha(ctx):
 ## Member Interactions ##
 
 
-@client.command()
+@bot.command()
 async def hug(ctx, member: discord.Member):
   user = member
   await Interact.hug(ctx, user)
 
-@client.command()
+@bot.command()
 async def kiss(ctx, user: discord.Member):
   await Interact.kiss(ctx, user)
 
 
-@client.command()
+@bot.command()
 async def eat(ctx, user: discord.Member):
   await Interact.nani(ctx, user)
 
 
 ## Custom Prefix ##
 
-@client.command()
+@bot.command()
 async def prefix(ctx, prefix):
     try:
         if prefix == '':
@@ -170,7 +170,7 @@ async def prefix(ctx, prefix):
 ## Utilidades ##
 
 
-@client.command(aliases=['foto', 'imagem'])
+@bot.command(aliases=['foto', 'imagem'])
 async def avatar(ctx, member: discord.Member):
   show_avatar = discord.Embed(
     title = f'Aqui está a foto dele, senhor {ctx.author}',
@@ -180,7 +180,7 @@ async def avatar(ctx, member: discord.Member):
   await ctx.send(f'{ctx.author.mention}', embed=show_avatar)
 
 
-@client.command()
+@bot.command()
 async def sugestão(ctx):
   await ctx.send(f'{ctx.author.mention}, você pode enviar uma sugestão de comando por este link: https://bit.ly/3uwBLfb')
 
@@ -189,40 +189,40 @@ async def sugestão(ctx):
 
    
 
-@client.command(aliases=['sessão?'])
+@bot.command(aliases=['sessão?'])
 async def sessão(ctx):
   await Misc.sessão(ctx)
 
 
-@client.command(aliases=['rec', 'sug', 'sugerir'])
+@bot.command(aliases=['rec', 'sug', 'sugerir'])
 async def recomendar(ctx):
   await Misc.recomendar(ctx)
 
 
-@client.command()
+@bot.command()
 async def pobre(ctx):
   await Misc.pobre(ctx)
 
 
-@client.command()
+@bot.command()
 async def multi(ctx):
   await Misc.multi(ctx)
 
 ## Images ##
 
 
-@client.command(aliases=['waifu', 'wa', 'garota', 'girl'])
+@bot.command(aliases=['waifu', 'wa', 'garota', 'girl'])
 async def anime(ctx, category):
   await AnimeImage.waifu(ctx, category)
 
 
-@client.command()
+@bot.command()
 async def trap(ctx):
   await AnimeImage.trap(ctx)
 
 
 
-@client.command()
+@bot.command()
 async def art(ctx):
   try:
     print(1)
@@ -234,13 +234,13 @@ async def art(ctx):
 
 ## Música ##
 
-@client.command()
+@bot.command()
 async def joi(ctx):
   canal = ctx.author.voice.voice_channel
-  await client.join_voice_channel(canal)
+  await bot.join_voice_channel(canal)
 
 
-@client.command()
+@bot.command()
 async def join(ctx):
     if not ctx.message.author.voice_channel:
         await ctx.send("{} is not connected to a voice channel".format(ctx.message.author.name))
@@ -253,7 +253,7 @@ async def join(ctx):
 ## Embeds ##
 
 
-#@client.command()
+#@bot.command()
 #async def ajudaa(ctx):
 #  await ctx.send(embed = ajuda)
 
@@ -278,4 +278,4 @@ async def on_command_error(ctx, error):
     await ErrorHandler.on_command_error(ctx, error)
 
 
-client.run(key)
+bot.run(key)
