@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import os
-import requests
 import json
 import random
 import datetime
@@ -278,4 +277,8 @@ async def on_command_error(ctx, error):
     await ErrorHandler.on_command_error(ctx, error)
 
 
-bot.run(key)
+def run_bot():
+  os.system('cls')
+  bot.run(key)
+
+run_bot()
