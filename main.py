@@ -6,6 +6,7 @@ import json
 import random
 import datetime
 from key import key
+from lists.images import *
 from modules.info import *
 from modules.rolls import *
 from modules.generators import *
@@ -144,19 +145,6 @@ async def kiss(ctx, user: discord.Member):
 @client.command()
 async def eat(ctx, user: discord.Member):
   await Interact.nani(ctx, user)
-
-#@client.command()
-#async def jav(ctx):
-#  japae = discord.Embed(
-#    title = f'As coisas estão ficando quentes por aqui!',
-#    description = f'{ctx.author.mention} eu não acredito que você está vendo esse tipo de coisa!',
-#    color = 2602879
-#  )
-
-#  japae.set_image(url=(random.choice(japa)))
-  
-#  await ctx.send(f'**{ctx.author.mention}**')
-#  await ctx.send(embed = japae)
 
 
 ## Custom Prefix ##
