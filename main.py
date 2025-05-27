@@ -281,4 +281,5 @@ def run_bot():
   os.system('cls')
   bot.run(key)
 
-run_bot()
+if __name__ == "__main__":
+  run_bot()
