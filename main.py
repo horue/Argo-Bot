@@ -86,6 +86,11 @@ async def servidor(ctx):
 
 
 @bot.command()
+async def sugestão(ctx):
+  await Info.sugestao(ctx)
+
+
+@bot.command()
 async def l(ctx):
   await Info.l(ctx)
 
@@ -176,11 +181,6 @@ async def avatar(ctx, member: discord.Member):
   )
   show_avatar.set_image(url='{}'.format(member.display_avatar.url))
   await ctx.send(f'{ctx.author.mention}', embed=show_avatar)
-
-
-@bot.command()
-async def sugestão(ctx):
-  await ctx.send(f'{ctx.author.mention}, você pode enviar uma sugestão de comando por este link: https://bit.ly/3uwBLfb')
 
 
 ## Memes ##

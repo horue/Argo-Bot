@@ -26,3 +26,7 @@ class Info():
     @staticmethod
     async def l(ctx):
         await ctx.send("I lived, Bithces.")
+
+    @staticmethod
+    async def sugestão(ctx):
+        await ctx.send(f'{ctx.author.mention}, você pode enviar uma sugestão de comando por este link: https://bit.ly/3uwBLfb')
