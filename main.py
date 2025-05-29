@@ -3,7 +3,6 @@ from discord.ext import commands
 import os
 import json
 import random
-import datetime
 from key import key
 from lists.images import *
 from modules.info import *
@@ -185,7 +184,6 @@ async def avatar(ctx, member: discord.Member):
 
 ## Memes ##
 
-   
 
 @bot.command(aliases=['sessão?'])
 async def sessão(ctx):
