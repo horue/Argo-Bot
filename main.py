@@ -259,22 +259,17 @@ async def join(ctx):
 ## Erros ##
 
 
-
 @avatar.error
 async def avatar_handler(ctx, error):
-    if isinstance(error, discord.ext.commands.errors.MissingRequiredArgument):
-        await ctx.send(f'Alô? Esqueceu de marcar de quem você quer a foto, {ctx.author.mention}!')
+  await ErrorHandler.avatar_handler(ctx, error)
 
-
-@anime.error
-async def avatar_handler(ctx, error):
-    if isinstance(error, discord.ext.commands.errors.CommandNotFound):
-        await ctx.send(f'Tá na Disney, meu querido? Esse comando não existe!')
 
 @bot.event
 async def on_command_error(ctx, error):
     await ErrorHandler.on_command_error(ctx, error)
 
+
+## Bot ##
 
 def run_bot():
   os.system('cls')
