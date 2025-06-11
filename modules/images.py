@@ -24,7 +24,7 @@ class AnimeImage():
             r = requests.get(f'https://api.waifu.pics/sfw/{category}')
             data = r.json()
             url = data['url']
-            await ctx.send(url)
+            return (url)
         except:
             await ctx.send(f'Erro.')
 
