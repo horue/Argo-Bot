@@ -11,7 +11,7 @@ from .utils.recomendations import *
 
 class Misc():
     async def sessão(ctx):
-        await ctx.send('Eu ouvi sessão?')
+        return('Eu ouvi sessão?')
 
 
     async def recomendar(ctx):
@@ -19,7 +19,7 @@ class Misc():
         await ctx.send(f'**{ctx.author.mention}, minha recomendação pra você é**: {title}\n{url}')
 
     async def pobre(ctx):
-        await ctx.send ('https://imgur.com/S8uJQVm')
+        return('https://imgur.com/S8uJQVm')
 
 
     async def multi(ctx):
