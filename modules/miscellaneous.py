@@ -16,7 +16,7 @@ class Misc():
 
     async def recomendar(ctx):
         url, title = mandar()
-        await ctx.send(f'**{ctx.author.mention}, minha recomendação pra você é**: {title}\n{url}')
+        return(f'**{ctx.author.mention}, minha recomendação pra você é**: {title}\n{url}')
 
     async def pobre(ctx):
         return('https://imgur.com/S8uJQVm')
