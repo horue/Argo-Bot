@@ -11,8 +11,8 @@ import random
 
 class Quote():
     async def maha(ctx):
-        await ctx.send(random.choice(mahaa))
+        return(random.choice(mahaa))
 
     async def qotd(ctx):
-        await ctx.send(random.choice(qotd))
+        return(random.choice(qotd))
 
