@@ -99,7 +99,7 @@ async def l(ctx):
 
 @bot.command(aliases=['r', 'dado', 'dice'])
 async def roll(ctx, info, conta='', ficha=''):
-  await Dice.roll(ctx, info, conta, ficha)
+  await ctx.send(await Dice.roll(ctx, info, conta, ficha))
 
 
 
@@ -128,7 +128,7 @@ async def permedi(ctx):
 
 @bot.command()
 async def maha(ctx):
-  await Quote.maha(ctx)
+  await ctx.send(await Quote.maha(ctx))
 
 
 ## Member Interactions ##
