@@ -35,7 +35,7 @@ class Dice():
                     rolagem = '**20**'
             if rolagem == 1:
                     rolagem = '**1**'
-            await ctx.send(f'{ctx.author.mention} 🎇 \n**Resultado**: D{numero} ({rolagem}) {conta} {ficha}\n**Total**: {total}')
+            return(f'{ctx.author.mention} 🎇 \n**Resultado**: D{numero} ({rolagem}) {conta} {ficha}\n**Total**: {total}')
 
 
     async def multiroll(ctx, quantidade=1, numero=20):
@@ -43,7 +43,7 @@ class Dice():
         for i in range (quantidade):
             rolagem=random.randint(1,int(numero))
             resultados.append(rolagem)
-        await ctx.send(f'{ctx.author.mention} 🎇 \n**Rolagem de**: {quantidade}d{numero}\n**Resultados**: {resultados}')
+        return(f'{ctx.author.mention} 🎇 \n**Rolagem de**: {quantidade}d{numero}\n**Resultados**: {resultados}')
 
 
 class Coin():
