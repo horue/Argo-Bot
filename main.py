@@ -187,7 +187,7 @@ async def avatar(ctx, member: discord.Member):
 
 @bot.command(aliases=['sessão?'])
 async def sessão(ctx):
-  await Misc.sessão(ctx)
+  await ctx.send(Misc.sessão(ctx))
 
 
 @bot.command(aliases=['rec', 'sug', 'sugerir'])
@@ -197,19 +197,19 @@ async def recomendar(ctx):
 
 @bot.command()
 async def pobre(ctx):
-  await Misc.pobre(ctx)
+  await ctx.send(await Misc.pobre(ctx))
 
 
 @bot.command()
 async def multi(ctx):
-  await Misc.multi(ctx)
+  await ctx.send(await Misc.multi(ctx))
 
 ## Images ##
 
 
 @bot.command(aliases=['waifu', 'wa', 'garota', 'girl'])
 async def anime(ctx, category):
-  await AnimeImage.waifu(ctx, category)
+  await ctx.send(await AnimeImage.waifu(category))
 
 
 @bot.command()
