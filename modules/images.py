@@ -17,7 +17,7 @@ class AnimeImage():
 
 
 
-    async def waifu(ctx, category):
+    async def waifu(category):
         if category == '':
             category = 'waifu'
         try:
@@ -26,5 +26,5 @@ class AnimeImage():
             url = data['url']
             return (url)
         except:
-            await ctx.send(f'Erro.')
+            return(f'Erro.')
 
