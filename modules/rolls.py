@@ -52,6 +52,6 @@ class Coin():
         await ctx.send('E o resultado é...')
         await ctx.send('...')
         if result == 0:
-            await ctx.send('Cara!')
+            return('Cara!')
         elif result == 1:
-             await ctx.send('Coroa!')
+             return('Coroa!')
