@@ -192,7 +192,7 @@ async def sessão(ctx):
 
 @bot.command(aliases=['rec', 'sug', 'sugerir'])
 async def recomendar(ctx):
-  await Misc.recomendar(ctx)
+  await ctx.send(await Misc.recomendar(ctx))
 
 
 @bot.command()
