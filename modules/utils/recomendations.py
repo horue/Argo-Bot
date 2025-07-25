@@ -1,6 +1,5 @@
 import random
 import requests
-import json
 
 def pegar_anime():
     id = random.randint(20, 60000)
@@ -17,4 +16,5 @@ def mandar():
     except:
         mandar()
 
-mandar()
+if __name__ == '__main__':
+    print(mandar())
