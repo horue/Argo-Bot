@@ -119,12 +119,12 @@ async def amount(ctx,min=100,max=500):
 
 @bot.command()
 async def per(ctx):
-  await CharacterCreator.modernCharacter(ctx)
+  await ctx.send(await CharacterCreator.modernCharacter(ctx))
 
 
 @bot.command(aliases=['personagem medieval'])
 async def permedi(ctx):
-  await CharacterCreator.medievalCharacter(ctx)
+  await ctx.send(await CharacterCreator.medievalCharacter(ctx))
 
 @bot.command()
 async def maha(ctx):
