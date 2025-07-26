@@ -91,7 +91,7 @@ async def sugestão(ctx):
 
 @bot.command()
 async def l(ctx):
-  await Info.l(ctx)
+  await ctx.send(await Info.l(ctx))
 
 
 ## Rolls ##
