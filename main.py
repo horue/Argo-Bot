@@ -105,7 +105,7 @@ async def roll(ctx, info, conta='', ficha=''):
 
 @bot.command()
 async def moeda(ctx):
-  await Coin.moeda(ctx)
+  await ctx.send(await Coin.moeda(ctx))
 
 
 @bot.command(aliases=['quantia', 'a'])
