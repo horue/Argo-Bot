@@ -81,7 +81,7 @@ async def frase(ctx):
 
 @bot.command()
 async def servidor(ctx):
-  await Info.servidor(ctx)
+  await ctx.send(await Info.servidor(ctx))
 
 
 @bot.command()
