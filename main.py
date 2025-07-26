@@ -67,7 +67,7 @@ async def log(ctx):
 
 @bot.command(aliases=['versão', 'versao', 'ver'])
 async def version(ctx):
-  await Info.version(ctx)
+  await ctx.send(await Info.version(ctx))
 
 
 @bot.command(aliases=['bom dia', 'boa tarde', 'boa noite'])
