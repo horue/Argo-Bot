@@ -76,7 +76,7 @@ async def olá(ctx):
 
 @bot.command()
 async def frase(ctx):
-  await Quote.qotd(ctx)
+  await ctx.send(await Quote.qotd(ctx))
 
 
 @bot.command()
