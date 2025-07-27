@@ -86,7 +86,7 @@ async def servidor(ctx):
 
 @bot.command()
 async def sugestão(ctx):
-  await Info.sugestao(ctx)
+  await ctx.send(await Info.sugestao(ctx))
 
 
 @bot.command()
